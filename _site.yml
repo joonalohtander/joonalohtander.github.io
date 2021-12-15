@@ -15,8 +15,6 @@ navbar:
       href: http://github.com/joonalohtander/
     - icon: fa-linkedin
       href: https://www.linkedin.com/in/joona-lohtander/
-    - icon: fa-gamepad
-      href: game.html
 output:
   html_document:
     theme: yeti
