@@ -1,0 +1,31 @@
+---
+title: "Rahapodi jaksonumero"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(rvest)
+library(dplyr)
+library(stringr)
+```
+
+```{r scrape, echo=FALSE}
+link = "https://www.nordnet.fi/blogi/rahapodi/"
+page = read_html(link)
+
+title = page %>%
+  html_nodes(".h5 a") %>%
+  html_text()
+
+last_title = title[1]
+last_episode_number = as.integer(str_sub(last_title, start = -3))
+
+this_episode_number = last_episode_number + 1
+
+print(paste0("Hei Martin ja Miikka! Viime jaksonne numero oli ",
+            last_episode_number,
+            ". Nyt teette jaksoa numero ",
+            this_episode_number))
+print(paste0("Viime jaksonne otsikko on '", str_sub(last_title, end = -17), "'."))
+```
+
