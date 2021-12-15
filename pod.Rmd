@@ -28,4 +28,3 @@ print(paste0("Hei Martin ja Miikka! Viime jaksonne numero oli ",
             this_episode_number))
 print(paste0("Viime jaksonne otsikko on '", str_sub(last_title, end = -17), "'."))
 ```
-

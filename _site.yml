@@ -3,7 +3,7 @@ navbar:
   title: "Joona Lohtander"
   left:
     - text: "About"
-      href: about.html
+      href: index.html
     - text: "Projects"
       href: projects.html
     - text: "Gallery"
