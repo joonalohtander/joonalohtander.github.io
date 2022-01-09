@@ -1,13 +1,9 @@
 ---
 title: "Gallery"
-output: 
-  flexdashboard::flex_dashboard:
-    orientation: columns
-    vertical_layout: fill
 ---
 
 ```{r setup, include=FALSE}
-library(flexdashboard)
+#library(flexdashboard)
 ```
 
-### To be updated...
+![Digitally averaged Time magazine covers from 2021.](FinalImage.png){width=50%}

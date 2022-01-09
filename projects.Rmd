@@ -6,4 +6,4 @@ title: "Projects"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### To be updated...
+[Digital Average of Time Magazine Covers from 2021](https://www.joonalohtander.com/img_avg.html)
