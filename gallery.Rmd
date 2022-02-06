@@ -7,3 +7,5 @@ title: "Gallery"
 ```
 
 ![Digitally averaged Time magazine covers from 2021.](FinalImage.png){width=50%}
+
+![Online worker supply / demand. (http://onlinelabourobservatory.org/)](animation.gif)
