@@ -12,7 +12,7 @@ library(reticulate)
 
 ## Digitally Averaging Time Magazines Covers From 2021
 
-In this project I will take the average of every Time magazines cover from last year. By taking the average I mean taking the average RGB-values for all the pixels.
+In this project I will take the average of every Time magazines cover from last year using Python. By taking the average I mean taking the average RGB-values for all the pixels.
 
 This code can be applied to any collection of images. Just be sure to set the correct variables in the following steps to determine, where the images are, what dimensions do you want them to have, and what filetypes they are.
 
