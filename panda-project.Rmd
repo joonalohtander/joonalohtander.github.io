@@ -1,0 +1,13 @@
+---
+title: "Panda"
+output:
+  html_document:
+    includes:
+      after_body: panda.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is a cute panda made with only html and css.

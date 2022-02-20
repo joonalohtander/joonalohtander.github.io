@@ -9,3 +9,5 @@ knitr::opts_chunk$set(echo = TRUE)
 [Digital Average of Time Magazine Covers from 2021](https://www.joonalohtander.com/img_avg.html)
 
 [Animated World Map With Data From Online Labour Index](https://www.joonalohtander.com/animated_mapplot.html)
+
+[Cute CSS Panda Doodle](https://www.joonalohtander.com/panda-project.html)

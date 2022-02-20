@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background: #fff6dd;
+}
+
+.canvas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff6dd;
+    width: 100%;
+    height: 100vh;
+}
+
+.circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 80vmin;
+    height: 80vmin;
+    border-radius: 50%;
+    background: #f4c566;
+}
+
+.head {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 25vmin;
+    height: 18vmin;
+    border-radius: 50%;
+    background: #ffffff;
+    bottom: 41vmin;
+    left: 29vmin;
+    border: .5vmin solid #000000;
+    z-index: 1;
+    transform: rotate(10deg);
+}
+
+.body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 25vmin;
+    height: 25vmin;
+    border-radius: 50%;
+    background: #ffffff;
+    bottom: -35vmin;
+    border: .5vmin solid #000000;
+}
+
+.ears {
+    position: absolute;
+    width: 7vmin;
+    height: 7vmin;
+    background: #000000;
+    border-radius: 50%;
+    bottom: 12vmin;
+    right: 17vmin;
+    box-shadow: 17vmin 0 #000000;
+}
+
+.eye-left {
+    position: absolute;
+    display: block;
+    width: 5vmin;
+    height: 7vmin;
+    background: #000000;
+    bottom: 5vmin;
+    right: 13vmin;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform: rotate(15deg);
+}
+
+.eye-right {
+    position: absolute;
+    display: block;
+    width: 5vmin;
+    height: 7vmin;
+    background: #000000;
+    bottom: 5vmin;
+    left: 13vmin;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform: rotate(-15deg);
+}
+
+.eyes {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 2vmin;
+    height: 1vmin;
+    border-radius: 50%;
+    background: #ffffff;
+    bottom: 9vmin;
+    right: 14.5vmin;
+    box-shadow: 7vmin 0 #ffffff;
+}
+
+.nose {
+    position: absolute;
+    width: 5vmin;
+    height: 4vmin;
+    background: #000000;
+    border-radius: 50%;
+    bottom: 2vmin;
+}
+
+.mouth {
+    position: absolute;
+    width: 4vmin;
+    height: 3.5vmin;
+    border-radius: 50%;
+    top: 13vmin;
+    border-bottom: 1vmin solid #000000;
+}
+
+.arm-left {
+    position: absolute;
+    display: block;
+    width: 7vmin;
+    height: 11vmin;
+    background: #000000;
+    bottom: 18vmin;
+    right: 19vmin;
+    border-radius: 50%;
+    transform: rotate(-28deg);
+    z-index: 2;
+}
+
+.arm-right {
+    position: absolute;
+    display: block;
+    width: 7vmin;
+    height: 10vmin;
+    background: #000000;
+    bottom: 12vmin;
+    left: 18vmin;
+    border-radius: 50%;
+    transform: rotate(-35deg);
+}
+
+.foot-left {
+    position: absolute;
+    display: block;
+    width: 9vmin;
+    height: 12vmin;
+    background: #000000;
+    bottom: -1vmin;
+    right: 14vmin;
+    border-radius: 50%;
+    transform: rotate(-25deg);
+}
+
+.foot-right {
+    position: absolute;
+    display: block;
+    width: 9vmin;
+    height: 12vmin;
+    background: #000000;
+    bottom: -1vmin;
+    left: 14vmin;
+    border-radius: 50%;
+    transform: rotate(25deg);
+}
+
+.sole {
+    position: absolute;
+    display: block;
+    width: 6vmin;
+    height: 7vmin;
+    background: #4D4847;
+    border-radius: 50%;
+    bottom: 1.5vmin;
+    left: 1.5vmin;
+}
+
+.twoToes {
+    position: absolute;
+    display: block;
+    width: 1.5vmin;
+    height: 1.5vmin;
+    background: #4D4847;
+    border-radius: 50%;
+    bottom: 8.5vmin;
+    left: 2vmin;
+    box-shadow: 2.2vmin -.5vmin #4D4847;
+}
+
+.pinky {
+    position: absolute;
+    display: block;
+    width: 1.5vmin;
+    height: 1.5vmin;
+    background: #4D4847;
+    border-radius: 50%;
+    bottom: 8vmin;
+    left: 6vmin;
+}
+
