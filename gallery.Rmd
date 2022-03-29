@@ -5,7 +5,18 @@ title: "Gallery"
 ```{r setup, include=FALSE}
 #library(flexdashboard)
 ```
+#### Digitally averaged Time magazine covers from 2021.
 
-![Digitally averaged Time magazine covers from 2021.](FinalImage.png){width=50%}
+![](FinalImage.png){width=50%}
 
-![Online worker supply / demand. (http://onlinelabourobservatory.org/)](animation.gif)
+#### Online worker supply / demand.
+
+![](animation.gif)
+
+Source: http://onlinelabourobservatory.org/
+
+#### Total number of positive Covid-19 tests per 1,000 people in Finland by municipality before 2022/3/13.
+
+![](covid_map.png){width=50%}
+
+Source: THL & Statistics Finland

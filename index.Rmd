@@ -8,8 +8,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <img src="pic.jpg" style="width:30%; padding: 0 10px 0 0" align="left">
 
-I am an economics and data enthusiast. I currently study economics in the University of Oulu. I am eager to solve your problems using data analytics, data science and economics.
+I am an economics and data enthusiast. I currently study economics in the University of Oulu. I am especially interested in leveraging technology to find insights. I am eager to solve your problems using data analytics, data science, and economics.
 
-Here you can check out some of my projects, find some of my visualizations and find my contact information. As of now, there are not a lot of projects or visualizations, but I will try to update them whenever I get the change.
+Here you can check out some of my projects, find some of examples of my visualizations, and find my contact information.
 
 If you have any questions or comments, feel free to contact me!
