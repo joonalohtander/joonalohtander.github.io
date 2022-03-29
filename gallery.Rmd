@@ -9,14 +9,15 @@ title: "Gallery"
 
 ![](FinalImage.png){width=50%}
 
+#### Total number of positive Covid-19 tests per 1,000 people in Finland by municipality before 2022/3/13.
+
+![](covid_map.png){width=50%}
+
+Source: THL & Statistics Finland
+
 #### Online worker supply / demand.
 
 ![](animation.gif)
 
 Source: http://onlinelabourobservatory.org/
 
-#### Total number of positive Covid-19 tests per 1,000 people in Finland by municipality before 2022/3/13.
-
-![](covid_map.png){width=50%}
-
-Source: THL & Statistics Finland
