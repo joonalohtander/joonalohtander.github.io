@@ -14,7 +14,7 @@ library(transformr)
 theme_set(theme_bw())
 ```
 
-## Creating a animated map plot
+## Creating an animated map plot
 
 Here I make an animated graph showing the increasing online labour outsourcing from developed countries to developing countries. The data consists of data from the OLI ([http://onlinelabourobservatory.org/oli-demand/](http://onlinelabourobservatory.org/oli-demand/); [http://onlinelabourobservatory.org/oli-supply/](http://onlinelabourobservatory.org/oli-supply/)).
 

@@ -8,8 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <img src="pic.jpg" style="width:30%; padding: 0 10px 0 0" align="left">
 
-I am an economics and data enthusiast. I currently study economics in the University of Oulu. I am especially interested in leveraging technology to find insights. I am eager to solve your problems using data analytics, data science, and economics.
-
-Here you can check out some of my projects, find some of examples of my visualizations, and find my contact information.
+I am an economics and data enthusiast. I am currently working as a researcher in the University of Oulu in the [GenZ - Economic resilience](https://www.oulu.fi/en/genz-economic-resilience-research-team) research team. My research interests include gig economy, crowdsourcing, and
+the resilience of individuals.
 
 If you have any questions or comments, feel free to contact me!

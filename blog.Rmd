@@ -1,0 +1,21 @@
+---
+title: "Blog"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Fun
+
+[Creating a Digital Average of Time Magazine Covers from 2021](https://www.joonalohtander.com/img_avg.html)
+
+[Finding Latent Topics from News Articles with Topic Modelling](https://medium.com/towardsdev/using-topic-modelling-to-find-topics-from-news-headlines-456d9fc8cac4)
+
+[Creating an Animated World Map With Data From Online Labour Index](https://www.joonalohtander.com/animated_mapplot.html)
+
+[Doodling with CSS and HTML](https://www.joonalohtander.com/panda-project.html)
+
+### Serious fun
+
+[Exploring gig economy resarch: a topic modelling approach (Master's Thesis)](http://jultika.oulu.fi/Record/nbnfioulu-202205172094)
