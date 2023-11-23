@@ -1,5 +1,5 @@
 ---
-title: "n:th root of least common multiple of integer vector from 1 to n"
+title: "N:th root of least common multiple of integer vector from 1 to n"
 author: "Joona Lohtander"
 date: "`r Sys.Date()`"
 output:
@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE, warning = F, message = F)
 ```
 
-I saw somewhere this interesting property: the N:th root of the least common multiple of an integer vector from 1 to N approaches the Euler's number when N approaches infinity:
+The N:th root of the least common multiple of an integer vector from 1 to N approaches the Euler's number when N approaches infinity^[You can find a detailed proof from [Daniel Fischer's](https://math.stackexchange.com/users/83702/daniel-fischer) answer to this question: [https://math.stackexchange.com/questions/834220/least-common-multiple-lim-sqrtn1-2-dotsc-n-e](https://math.stackexchange.com/questions/834220/least-common-multiple-lim-sqrtn1-2-dotsc-n-e).]:
 
 $$\lim_{N \to \infty} \sqrt[N]{lcm(1,2,...,N)} = e$$
 

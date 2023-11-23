@@ -295,9 +295,9 @@ integer vector from 1 to n</h1>
 </div>
 
 
-<p>I saw somewhere this interesting property: the N:th root of the least
-common multiple of an integer vector from 1 to N approaches the Euler’s
-number when N approaches infinity:</p>
+<p>The N:th root of the least common multiple of an integer vector from
+1 to N approaches the Euler’s number when N approaches infinity<a
+href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>:</p>
 <p><span class="math display">\[\lim_{N \to \infty}
 \sqrt[N]{lcm(1,2,...,N)} = e\]</span></p>
 <p>I wanted to write R code to visualize this result:</p>
@@ -384,6 +384,16 @@ log(N, 2)</code></pre>
   xlim(c(0, 500)) +
   theme(panel.grid = element_blank())</code></pre>
 <p><img src="nth_root_of_lcm_1_to_n_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>You can find a detailed proof from <a
+href="https://math.stackexchange.com/users/83702/daniel-fischer">Daniel
+Fischer’s</a> answer to this question: <a
+href="https://math.stackexchange.com/questions/834220/least-common-multiple-lim-sqrtn1-2-dotsc-n-e">https://math.stackexchange.com/questions/834220/least-common-multiple-lim-sqrtn1-2-dotsc-n-e</a>.<a
+href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
 
 
 
