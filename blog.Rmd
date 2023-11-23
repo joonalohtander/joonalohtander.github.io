@@ -8,6 +8,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Fun
 
+[$\lim_{N \to \infty} \sqrt[N]{lcm(1,2,...,N)} = e$](https://www.joonalohtander.com/nth_root_of_lcm_1_to_n.html)
+
 [Creating a Digital Average of Time Magazine Covers from 2021](https://www.joonalohtander.com/img_avg.html)
 
 [Finding Latent Topics from News Articles with Topic Modelling](https://medium.com/towardsdev/using-topic-modelling-to-find-topics-from-news-headlines-456d9fc8cac4)

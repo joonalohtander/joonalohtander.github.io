@@ -9,14 +9,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Joona Lohtander" />
 
+<meta name="date" content="2023-11-23" />
 
-<title>Blog</title>
+<title>n:th root of least common multiple of integer vector from 1 to n</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -285,35 +287,103 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Blog</h1>
+<h1 class="title toc-ignore">n:th root of least common multiple of
+integer vector from 1 to n</h1>
+<h4 class="author">Joona Lohtander</h4>
+<h4 class="date">2023-11-23</h4>
 
 </div>
 
 
-<div id="fun" class="section level3">
-<h3>Fun</h3>
-<p><a
-href="https://www.joonalohtander.com/nth_root_of_lcm_1_to_n.html"><span
-class="math inline">\(\lim_{N \to \infty} \sqrt[N]{lcm(1,2,...,N)} =
-e\)</span></a></p>
-<p><a href="https://www.joonalohtander.com/img_avg.html">Creating a
-Digital Average of Time Magazine Covers from 2021</a></p>
-<p><a
-href="https://medium.com/towardsdev/using-topic-modelling-to-find-topics-from-news-headlines-456d9fc8cac4">Finding
-Latent Topics from News Articles with Topic Modelling</a></p>
-<p><a
-href="https://www.joonalohtander.com/animated_mapplot.html">Creating an
-Animated World Map With Data From Online Labour Index</a></p>
-<p><a href="https://www.joonalohtander.com/panda-project.html">Doodling
-with CSS and HTML</a></p>
-</div>
-<div id="serious-fun" class="section level3">
-<h3>Serious fun</h3>
-<p><a
-href="http://jultika.oulu.fi/Record/nbnfioulu-202205172094">Exploring
-gig economy resarch: a topic modelling approach (Master’s
-Thesis)</a></p>
-</div>
+<p>I saw somewhere this interesting property: the N:th root of the least
+common multiple of an integer vector from 1 to N approaches the Euler’s
+number when N approaches infinity:</p>
+<p><span class="math display">\[\lim_{N \to \infty}
+\sqrt[N]{lcm(1,2,...,N)} = e\]</span></p>
+<p>I wanted to write R code to visualize this result:</p>
+<pre class="r"><code>library(VeryLargeIntegers)
+library(tidyverse)
+library(data.table)
+library(latex2exp)
+library(Rmpfr)
+
+N &lt;- 500
+
+nth_root_lcm_1_to_n &lt;- function(N) {
+  # Use Reduce() to calculate the least common multiple of 1 through N
+  a &lt;- Reduce(lcmul, 1:N)
+  
+  # Use mpfr() to convert a to an arbitrary precision number
+  a &lt;- as.character(a)
+  precision &lt;- ifelse(str_length(a) &gt;= 200, str_length(a), 100)
+  a &lt;- mpfr(a, precBits = precision)
+  
+  # Use mpfr() to calculate the Nth root of a with the desired precision
+  return(a ^ (1/N) %&gt;% as.double())
+}
+
+data &lt;- data.table(n = as.double(1:N)) %&gt;% 
+  .[, i := ifelse(n %in% 1:2, n, nth_root_lcm_1_to_n(n)), n]
+
+data %&gt;% 
+  ggplot(aes(x = n, y = i)) +
+  xlab(&quot;N&quot;) +
+  geom_point() +
+  geom_line() +
+  ylab(TeX(&quot;$\\sqrt[N]{lcm(1,2,...,N)}$&quot;)) +
+  theme_bw() +
+  xlim(c(0, 500))</code></pre>
+<p><img src="nth_root_of_lcm_1_to_n_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>What’s interesting is that, the convergence is not “smooth”, i.e.,
+there are “jumps” in the value of the function. Obviously, at these
+“jumps” the value of the LCM changes. See, e.g., here:</p>
+<pre class="r"><code>data %&gt;% 
+  ggplot(aes(x = n, y = i)) +
+  xlab(&quot;N&quot;) +
+  geom_point() +
+  geom_line() +
+  ylab(TeX(&quot;$\\sqrt[N]{lcm(1,2,...,N)}$&quot;)) +
+  theme_bw() +
+  xlim(c(0, 500)) + 
+  xlim(c(100, 200)) +
+  theme(panel.grid = element_blank())</code></pre>
+<p><img src="nth_root_of_lcm_1_to_n_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Clearly, the LCM changes when <span class="math inline">\(N\)</span>
+is a prime. Let’s plot the point’s where <span
+class="math inline">\(N\)</span> is a prime:</p>
+<pre class="r"><code># Find all primes less than or equal to N
+primes &lt;- primes(N, bar = F) %&gt;% as.integer()
+
+data %&gt;% 
+  ggplot(aes(x = n, y = i)) +
+  xlab(&quot;N&quot;) +
+  geom_vline(xintercept = primes, color = &quot;lightgrey&quot;) +
+  geom_point() +
+  geom_line() +
+  ylab(TeX(&quot;$\\sqrt[N]{lcm(1,2,...,N)}$&quot;)) +
+  theme_bw() +
+  xlim(c(0, 500)) +
+  xlim(c(100, 200)) +
+  theme(panel.grid = element_blank())</code></pre>
+<p><img src="nth_root_of_lcm_1_to_n_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>There still remains some “jumps”. These jumps are powers of
+primes:</p>
+<pre class="r"><code># Calculate how large powers to calculate
+log(N, 2)</code></pre>
+<pre><code>## [1] 8.965784</code></pre>
+<pre class="r"><code>data %&gt;% 
+  ggplot(aes(x = n, y = i)) +
+  xlab(&quot;N&quot;) +
+  geom_vline(xintercept = primes, color = &quot;lightgrey&quot;) +
+  geom_vline(xintercept = c(primes^2, primes^3, primes^4,primes^5,primes^6, primes^7, primes^8), color = &quot;pink&quot;) +
+  geom_point() +
+  geom_line() +
+  ylab(TeX(&quot;$\\sqrt[N]{lcm(1,2,...,N)}$&quot;)) +
+  theme_bw() +
+  xlim(c(0, 500)) + 
+  xlim(c(0, 500)) +
+  theme(panel.grid = element_blank())</code></pre>
+<p><img src="nth_root_of_lcm_1_to_n_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 
 
 
