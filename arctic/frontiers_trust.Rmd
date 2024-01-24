@@ -1,0 +1,28 @@
+---
+title: "Arctic Frontiers"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+fileConn <- file("header.html")
+writeLines('<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />', fileConn)
+close(fileConn)
+```
+
+<img src="trust.png" style="width:100%; padding: 0 10px 0 0" align="left" id = "image">
+
+```{r, echo=FALSE, results="asis"}
+cat("
+<script>
+setInterval(function() {
+    var myImageElement = document.getElementById('image');
+    var imageUrl = myImageElement.src.split('?')[0]; // Remove cache-busting query param if it exists
+    myImageElement.src = imageUrl + '?rand=' + Math.random(); // Append a random number as a query param to force the browser to bypass the cache
+}, 1000); // Refresh every 10 seconds
+</script>
+")
+```
+
