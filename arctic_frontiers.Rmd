@@ -4,6 +4,12 @@ title: "Arctic Frontiers"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+fileConn <- file("header.html")
+writeLines('<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />', fileConn)
+close(fileConn)
 ```
 
 <img src="trust.png" style="width:100%; padding: 0 10px 0 0" align="left" id = "image">
