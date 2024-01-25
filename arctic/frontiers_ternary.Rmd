@@ -12,17 +12,4 @@ writeLines('<meta http-equiv="Cache-Control" content="no-cache, no-store, must-r
 close(fileConn)
 ```
 
-<img src="ternary.png" style="padding: 10px 10px 10px 10px" align="left" id = "image">
-
-```{r, echo=FALSE, results="asis"}
-cat("
-<script>
-setInterval(function() {
-    var myImageElement = document.getElementById('image');
-    var imageUrl = myImageElement.src.split('?')[0]; // Remove cache-busting query param if it exists
-    myImageElement.src = imageUrl + '?rand=' + Math.random(); // Append a random number as a query param to force the browser to bypass the cache
-}, 1000); // Refresh every 10 seconds
-</script>
-")
-```
-
+<img src="ternary.png" style="width=100%; padding: 10px 10px 10px 10px" align="left" id = "image">
