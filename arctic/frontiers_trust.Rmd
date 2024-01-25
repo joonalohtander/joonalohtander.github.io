@@ -21,7 +21,9 @@ function loadImage() {
   var d = new Date();
   document.getElementById('image').src = 'trust.png?rand=' + d.getTime() + '.png';
 }
-window.onload = loadImage;
+window.onload = function () {
+  setInterval(loadImage, 1000); // load image every 1000 milliseconds (1 second)
+};
 </script>
 ")
 ```
