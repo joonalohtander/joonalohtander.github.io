@@ -12,7 +12,7 @@ writeLines('<meta http-equiv="Cache-Control" content="no-cache, no-store, must-r
 close(fileConn)
 ```
 
-<img src="ternary.png" style="width:100%; padding: 0 10px 0 0" align="left" id = "image">
+<img src="ternary.png" style="padding: 10px 10px 10px 10px" align="left" id = "image">
 
 ```{r, echo=FALSE, results="asis"}
 cat("
