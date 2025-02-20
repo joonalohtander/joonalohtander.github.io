@@ -6,7 +6,6 @@ title: "Blog"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Fun
 
 [$\lim_{N \to \infty} \sqrt[N]{lcm(1,2,...,N)} = e$](https://www.joonalohtander.com/nth_root_of_lcm_1_to_n.html)
 
@@ -17,7 +16,3 @@ knitr::opts_chunk$set(echo = TRUE)
 [Creating an Animated World Map With Data From Online Labour Index](https://www.joonalohtander.com/animated_mapplot.html)
 
 [Doodling with CSS and HTML](https://www.joonalohtander.com/panda-project.html)
-
-### Serious fun
-
-[Exploring gig economy resarch: a topic modelling approach (Master's Thesis)](http://jultika.oulu.fi/Record/nbnfioulu-202205172094)
