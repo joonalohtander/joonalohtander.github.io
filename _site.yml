@@ -2,10 +2,10 @@ name: "my-website"
 navbar:
   title: "Joona Lohtander"
   left:
-    - text: "About"
+    - text: "About me"
       href: index.html
-    - text: "Blog"
-      href: blog.html
+    - text: "Joona Solutions"
+      href: https://www.joonasolutions.com
   right: 
     - icon: fa-envelope fa-lg
       href: mailto:<mail@joonasolutions.com>
