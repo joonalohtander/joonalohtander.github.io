@@ -1,0 +1,128 @@
+---
+title: "Yle kuntavaalikoneen data"
+author: "Joona Lohtander"
+format: html
+execute:
+  enabled: false
+---
+
+## Yleisesti datan haravoinnista ja ohjelmistorajapinnoista
+
+Jos haluat käyttöösi netissä julkisena saatavilla olevaa dataa, käytössäsi on käytännössä kolme vaihtoehtoa. Paras vaihtoehto on käyttää datan julkaisijan ohjelmointirajapintaa tai muuta datan julkaisijan hyväksymää keinoa. Toiseksi paras vaihtoehto on kysyä, voisitko saada datan suoraan. Huonoin vaihtoehto on se, että joudut turvautumaan verkkoharavointiin, mikä on hidasta ja saattaa aiheuttaa ei-toivottua liikennettä datan julkaisijalle. Jos kuitenkin päätät turvautua verkkoharavointiin, tarkista ensin julkaisijan [*robots.txt*](https://www.robotstxt.org/) -tiedosto. Varmista myös, että verkkoharavointi tapahtuu niin, ettei liikennettä synny kohtuuttomasti. Myös ohjelmointirajapintoja käytettäessä on hyvä pitää mielessä rajapintaan kohdistuva rasitus. Eikä pelkästään siksi, että liika rasitus voi johtaa esimerkiksi IP-osoitteesi väliaikaiseen tai pysyväänkin estämiseen.
+
+## Yle:n kunta- ja aluevaalikone
+
+Yle on julkaissut kunta- ja aluevaalikoneensa osoitteessa <https://vaalit.yle.fi/vaalikone/alue-ja-kuntavaalit2025>.
+
+Vaalikoneen vastauksia voi selailla kunnittain Ylen käyttöliittymällä. Jos kuitenkin haluat tutkia vaalikoneen vastauksia laajemmin, vastaukset ja vastaajien tiedot ovat saatavilla Yle:n julkisen ohjelmointirajapinnan (API) kautta. Ohjelmointirajapintaa ei ole dokumentoitu, mutta olennaiset tiedot ovat helposti pääteltävissä vaalikoneen verkkoliikennettä seuraamalla. Esimerkiksi Oulun kuntavaalikoneen vastaajien tiedot löytyvät osoitteesta <https://vaalit.yle.fi/vaalikone/alue-ja-kuntavaalit2025/api/public/municipality/constituencies/155/candidates>. Tässä osoitteessa *155* on Oulun kuntakoodi. Käyttämällä hieman maalaisjärkeä, voidaan päätellä riittävät tiedot kandidaattien vastauksien keräämiseksi ohjelmointirajapinnan kautta.
+
+## Python koodi
+
+Kirjoitin alla olevan koodin koko Suomen vaalikonevastaajien datan keräämiseksi Pythonilla. Koodi hakee ensin tiedot vaalipiirien ehdokkaista ja sitten tiedot ehdokkaiden vastauksista.
+
+Huomioitavaa tässä on, että jos Yle:n ohjelmointirajapinta palauttaa virhekoodin, Python "nukkuu" (sleep) viiden sekunnin ajan ja kokeilee sitten uudelleen, mutta enintään kolme kertaa. Kaikista kandidaateista ei siis välttämättä saada tietoja, jos esimerkiksi nettiyhteys pätkii tai jos Yle:n ohjelmointirajapinnan rajoitukset tulevat vastaan. Toinen huomioitava asia on lukuisat for-loopit, joita lähtökohtaisesti kannattaisi välttää, jos saman asian voi toteuttaa jotenkin rinnakkaistamalla. Tässä tapauksessa kuitenkin on parempi tehdä API-kutsut yksi kerrallaan ja välttää API:n ruuhkauttamista.
+
+```{python}
+import time
+import requests
+import pandas as pd
+
+# Define the API endpoint
+API_URL = "https://vaalit.yle.fi/vaalikone/alue-ja-kuntavaalit2025/api/public/municipality/constituencies/" 
+
+def fetch(api_url):
+    try:
+        response = requests.get(api_url)
+        response.raise_for_status()  # Raise an error for bad responses (4xx, 5xx)
+        json = response.json()  # Parse the JSON response
+
+        return json
+
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching data: {e}")
+        return None  # Return None in case of error
+
+def process_candidate_data(candidate_data, constituency_id):
+    candidate_info = {
+        "id": candidate_data.get("id", 0),
+        "first_name": candidate_data.get("first_name", ""),
+        "last_name": candidate_data.get("last_name", ""),
+        "party_id": candidate_data.get("party_id", ""),
+        "constituency_id": constituency_id,
+        "gender": candidate_data.get("info", {}).get("gender", {}).get("name_en", ""),
+        "age": candidate_data.get("info", {}).get("age", 0),
+        "education": candidate_data.get("info", {}).get("education", {}).get("name_en", ""),
+        "left_right_axis": candidate_data.get("info", {}).get("left_right_axis", {}).get("name_en", ""),
+        "language": candidate_data.get("info", {}).get("language", {}).get("name_en", ""),
+        "liberal_conservative_axis": candidate_data.get("info", {}).get("liberal_conservative_axis", {}).get("name_en", "")
+    }
+
+    # Extract answers in long format
+    answers_list = []
+    for question_id, answer_details in candidate_data.get("answers", {}).items():
+        if isinstance(answer_details, dict) and "answer" in answer_details and answer_details["answer"]:
+            answers_list.append({
+                "candidate_id": candidate_info["id"],
+                "first_name": candidate_info["first_name"],
+                "last_name": candidate_info["last_name"],
+                "party_id": candidate_info["party_id"],
+                "constituency_id": candidate_info["constituency_id"],
+                "gender": candidate_info["gender"],
+                "age": candidate_info["age"],
+                "education": candidate_info["education"],
+                "left_right_axis": candidate_info["left_right_axis"],
+                "language": candidate_info["language"],
+                "liberal_conservative_axis": candidate_info["liberal_conservative_axis"],
+                "question_id": int(question_id),
+                "answer_value": answer_details["answer"],
+            })
+    
+    # Return the processed answers list
+    return answers_list
+
+# Fetch the data and print the DataFrame
+df_constituencies = fetch(API_URL)
+df_constituencies = pd.DataFrame(df_constituencies)
+
+# Fetch data on candidates
+i = 0
+df_candidates_list = []
+
+for constituency_id in df_constituencies["id"]:
+    retries = 2
+    while retries >= 0:
+        try:
+            candidates_in_constituency = fetch(f"{API_URL}{constituency_id}/candidates")
+            df_candidates_in_constituency = pd.DataFrame(candidates_in_constituency)
+            break
+        except Exception as e:
+            print(f"Error fetching candidates for constituency {constituency_id}: {e}")
+            if retries == 0:
+                print("Skipping this constituency after multiple failures.")
+                break 
+            time.sleep(5)
+            retries -= 1
+
+    for candidate_id in df_candidates_in_constituency["id"]:
+        print(f"Fetching data for candidate {candidate_id} in constituency {constituency_id}")
+        retries = 2
+        while retries >= 0:
+            try:
+                candidate_data = fetch(f"{API_URL}{constituency_id}/candidates/{candidate_id}")
+                df_candidates_list.extend(process_candidate_data(candidate_data, constituency_id))
+                break
+            except Exception as e:
+                print(f"Error fetching data for candidate {candidate_id}: {e}")
+                if retries == 0:
+                    print("Skipping this candidate after multiple failures.")
+                    break
+                time.sleep(5)
+                retries -= 1
+
+# Convert list to DataFrame
+df_candidates = pd.DataFrame(df_candidates_list)
+
+# Save to csv
+df_candidates.to_csv("data/candidates.csv")
+df_constituencies.to_csv("data/constituencies.csv")
+```
