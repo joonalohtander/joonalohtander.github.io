@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>AIS2025</title>
+</head>
+<body>
+    <img id="ternary" src="./ternary.png" style="height: 100vh"></img>
+</body>
+
+<script>
+  const img = document.getElementById('ternary');
+  img.src = './ternary.png?cachebuster=' + new Date().getTime();
+</script>
+</html>
