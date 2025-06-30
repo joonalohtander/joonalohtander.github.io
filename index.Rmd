@@ -6,7 +6,7 @@ title: "About me"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<img src="pic.jpg" style="width:30%; padding: 0 10px 0 0" align="left">
+<img src="pic.png" style="width:30%; padding: 0 10px 0 0" align="left">
 
 I am an economics and data enthusiast. I am currently working as a doctoral researcher in the University of Oulu in the [Economic resilience](https://www.oulu.fi/en/research-groups/economic-resilience-econre-research-team) research team. My research interests include behavioral economics, personality, resilience and group decisions.
 
