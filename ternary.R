@@ -6,7 +6,7 @@ library(here)
 theme_set(theme_bw())
 i_am("ternary.R")
 
-max_value = 8 # Maximum value in Likert scale
+max_value = 9 # Maximum value in Likert scale
 
 # read data
 # sheet_url is the URL for the data from the Google form (Google Sheets link)
