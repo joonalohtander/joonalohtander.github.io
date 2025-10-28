@@ -6,7 +6,7 @@ library(here)
 theme_set(theme_bw())
 i_am("ternary.R")
 
-max_value = 9 # Maximum value in Likert scale
+max_value = 8 # Maximum value in Likert scale
 
 # read data
 # sheet_url is the URL for the data from the Google form (Google Sheets link)
@@ -20,9 +20,9 @@ data <- read_sheet(sheet_url) %>%
 colnames(data) <- c("timestamp", "env_econ", "env_soc", "soc_econ")
 
 data <- data %>% 
-  .[, env_econ := as.integer(sub("\\..*", "", env_econ))+5] %>% 
-  .[, env_soc := as.integer(sub("\\..*", "", env_soc))+5] %>% 
-  .[, soc_econ := as.integer(sub("\\..*", "", soc_econ))+5]
+  .[, env_econ := as.integer(sub("\\..*", "", env_econ))+4] %>% 
+  .[, env_soc := as.integer(sub("\\..*", "", env_soc))+4] %>% 
+  .[, soc_econ := as.integer(sub("\\..*", "", soc_econ))+4]
 
 env_econ = data$env_econ
 env_soc = data$env_soc
