@@ -1,0 +1,32 @@
+---
+title: "Using Neovim for R and LaTeX"
+author: "Joona Lohtander"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## My Neovim Journey
+
+For years, I only used vim on servers to edit simple config files. Now, I've been using Neovim for all my R and LaTeX work, and a bit of python. I’ve started to appreciate it for its simplicity and speed. Honestly, it didn't take much to become more productive with it than I ever was using Rstudio. Neovim is a simple terminal-based editor, which might seem like just trying to brag and be difficult, but once you get used to it, it keeps you focused. You can navigate, edit, and run code entirely without leaving the keyboard, which I really like. Plus, it *is* fun and flashy.
+
+## R Workflow
+
+For R, I usually have a script open and send code directly to an R REPL. I rely on the R language server for basic autocomplete and diagnostics, which is enough for most tasks. I also like using `telescope.nvim` for quickly jumping between scripts, datasets, or project files.
+
+It’s surprisingly comfortable to work with plots and analyses entirely from Neovim. Since I run the Sway tiling window manager, its easy to just use the sway keybindings to close plots after reviewing them.
+
+## LaTeX Workflow
+
+I also use Neovim for writing LaTeX documents. Previously, I used Overleaf exclusively for my LaTeX needs. It worked perfectly, but being browser based and lacking vim keybindings started to make me feel like I could do better. With `vimtex` and `latexmk`, I don't see any reason to switch back. Forward and inverse search between the PDF output and source is handy for quick edits. 
+
+## Why I Like It
+
+What really stands out for me is **speed and simplicity**. There’s no bloat, nothing slowing me down. Everything is just fast and keyboard-centric. I can focus entirely on what I’m doing, whether it is coding an experiment with oTree, doing some estimations with R or writing papers with LaTeX.
+
+If you’re curious, you can check out my full Neovim configuration here: [https://github.com/joonalohtander/nvim](https://github.com/joonalohtander/nvim)
+
+My configs work for my setup, they might work for yours as well if you're lucky.
