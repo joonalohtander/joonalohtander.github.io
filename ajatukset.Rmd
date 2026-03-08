@@ -1,0 +1,129 @@
+---
+title: "Ihan mahdolliset ajatukset"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+author: "Joona Lohtander"
+bibliography: library.bib
+link-citations: true
+output: html
+---
+
+Olin noin viikko sitten Suomen Kulttuurirahaston vuosijuhlassa aivan valloittavassa seurassa. Jälkeenpäin
+ajateltuna oli hölmöä yllättyä, mutta yllätyin kuitenkin päivällisseurueen kysellessä
+kaikenlaista väitöskirjaani liittyvää. Huomasin, että vaikka olin viettänyt jo aikaa
+väitöskirjani parissa, koin vaikeuksia tutkimukseni pukemisessa merkityksellisiksi
+sanaketjuiksi. Osasin toki kertoa tutkimuksestani samaan tapaan kuin pieni lapsi
+osaa kertoa jännittävästä tapahtumasta päiväkodissa: kuulijalle käy ehkä ilmi
+asian jännittävyys, mutta ei niinkään syy jännittävyydelle. Tässä tekstissä
+koitan hieman raottaa väitöskirjani jännittävyyttä. Tästä tuli vähän pitkä, ja
+vähän ajatuksenvirtamainen, sori.
+
+## Esa Saarinen ja ihan mahdolliset ajatukset
+
+Olen kuunnellut Esa Saarisen *Filosofia ja Systeemiajattelu* -luentosarjaa 
+silloin tällöin, mutta ajatuksistani ja ajattelustani hän on vallannut pelkkiä luentoja suuremman
+tilan. Esalla on lähes harukimurakamimaista kykyä naamioida valloittavia ajatuksia epäjohdonmukaiselta
+höpinältä kuulostavaan ulkomuotoon. Vasta paljon myöhemmin siitä, kun Esan sanat ovat tavoittaneet korvakäytäväni,
+tapahtuu oivallus siitä, että ajattelussani on kuin onkin tapahtunut muutos.
+
+Esan keinoja riisua kuuntelijan oman ajattelutavan puolustamiseen käytetyt
+aseet ovat muiden muassa lausahdukset, kuten "*tää ei oo mikään kritiikki*", tai 
+vielä valloittavampi "*huomatkaa, tää on ihan mahdollinen ajatus, niin, ihmiselle*". 
+No, ennen kuin huomasinkaan, jäin pureksimaan näitä ihan mahdollisia ajatuksia,
+ja jopa pohtimaan, mikä muuttuisi, jos minäkin ajattelisin tuolla ihan mahdollisella
+tavalla.
+
+Näin myös konkreettisemman linkin ihan mahdollisten ajatusten ja käyttäytymistaloustieteeseen
+erikoistuvan väitöskirjatutkijan työssä. Taloustiedehän on ollut pitkään normatiivista.
+On lähdettu oletuksesta, että yksilö on rationaalinen ja usein myös omaa odotettua
+hyötyään maksimoiva optimoija. Huomatkaa, että tämäkin on ihan mahdollinen ajatus,
+ja on johtanut valtaviin edistysaskeliin erilaisten talouden ilmiöiden ymmärtämisessä.
+
+*Ihan mahdollinen ajatus* -tyyppistä ajattelua voi käsitellä *miksi kukaan ajattelis
+noin?* -tyyppisen ajattelun kautta. Tämäkin on ihan mahdollinen ajatus, ja aivan
+perustavanlaatuisen tärkeä taloustieteen teorian kehityskulun kannalta. Kuitenkin,
+jälkimmäinen ajattelutapa rajaa ajattelun ja käyttäytymisen tutkimista ja on ihan
+mahdollista, että pelkästään jälkimmäistä ajattelutyyppiä käyttämällä Daniel Kahneman 
+taikka Richard Thaler eivät olisi
+voittaneet *Sveriges riksbanks pris i ekonomisk vetenskap till Alfred Nobels minne* 
+-palkintoa ("Taloustieteen Nobel", Kahneman vuonna 2002 ja Thaler vuonna 2017).
+
+Daniel Kahneman lausuu kirjassaan *Thinking, Fast and Slow* [@kahneman_thinking_2012, s. 412] seuraavaa: 
+"*when we observe people acting in a way that seems odd, we should consider the
+possibility that they have a good reason to do what they do. Psychological
+interpretations should only be invoked when the reasons become implausible*".
+Siis, *miksi kukaan tekisi noin* -tyyppinen ajattelu voi johtaa järkiperäisiin
+selityksiin äkkiseltään tarkasteltuna hölmöltä vaikuttavalle käytökselle.
+Kuitenkin, ilman *ihan mahdollinen ajatus* -tyyppistä ajattelua, taloustiede ei
+nyt olisi nykyisessä asemassaan. Tunnustaessamme erilaisten ajatusten olemassaolon
+voimme tutkia missä määrin niitä esiintyy ja missä määrin ne näyttäytyvät käyttäytymisessä.
+
+## Käyttäytymis*talous*tiede ja psykologia
+
+Taloustieteen ja käyttäytymisen kytkös ei ehkä ole ilmiselvä taloustieteen ulkopuolelta
+tarkasteltuna. Kuitenkin taloudelliset ilmiöt kumpuavat ihmisten käyttäytymisestä.
+Taloustiede teki valtavia harppauksia pitkään perustuen melko rajattuun kuvaan
+ihmisistä laskelmoivina ja rationaalisina hyödyn maksimoijina. Kun tämä rajattu
+kuva ihmisestä alkoi murentua, taloustieteilijät luonnollisesti kiinnostuivat.
+Käyttäytymistaloustiede (ja nykyään myös ns. *neuroeconomics*) keskittyy tutkimaan
+ja mallintamaan ihmisen käyttäytymistä erilaisissa tilanteissa, ja tällä tavoin
+täydentää esimerkiksi rationaaliseen käyttäytymiseen pohjautuvia peliteoreettisia
+teorioita.
+
+Käyttäytymistaloustiede siis tutkii missä määrin erilaiset ajatukset näkyvät käyttäytymisessä,
+yleensä jossakin taloustieteilijöitä kiinnostavassa, eli talouteen liittyvässä, kontekstissa.
+Elämämme aikana teemme valtavasti valtavan tärkeitä taloudellisia päätöksiä. Kuinka
+paljon valveillaoloajastamme käytämme kouluttautumiseen, työn tekoon ja vapaa-aikaan.
+Kuinka paljon, ja mitä, kulutamme. Kuinka paljon säästämme, ja mihin säästömme
+sijoitamme.
+
+Koska psykologia on historiallisesti ollut taloustiedettä taipuvaisempi *ihan
+mahdollinen ajatus* -tyyppiseen ajatteluun, käyttäytymistaloustiede on lainannut
+psykologian ajatuksia roimalla kädellä. Tai, oikeammin, psykologia on käynnistänyt
+taloustieteessä murroksen, jota nykyään kutsumme käyttäytymistaloustieteeksi. Toki
+taloustieteilijätkin, kuten Richar Thaler, ovat luoneet uusia ihan mahdollisia 
+ajatuksia ja löytäneet ajatuksiaan tukevia havaintoja.
+
+On myös huomattava, että perinteinen hyödyn maksimointi -ajatuskehikkohin voi
+olla erinomaisen hedelmällinen mahdollisten ajatusten lähde. Eivätkä prospektiteoria
+tai muut mullistavat ajatukset olisi ehkä olleet niin mullistavia ilman kontrastia
+niiden ja perinteisempien, normatiivisten ajattelutapojen välillä. Nykyäänkin
+käyttäytymistaloustieteen tutkimuksessa käyttäytymistä peilataan usein erilaisiin
+perinteisempien mallien ennustuksiin.
+
+## Paluu väikkäriini
+
+Väitöskirjassani tutkin kokeellisen taloustieteen keinoin persoonallisuuden ja
+käyttäytymisvinoumien vaikutuksia ryhmien taloudellisiin päätöksiin. Erityisesti
+keskityn asenteisiin muutoksia kohtaan.
+
+Mahdollisia ajatuksia muutoksia kohtaan on valtavasti. Yleisesti ottaen, ihmiset
+ovat taipuvaisia pysymään nykytilassa muutoksen sijaan [@samuelson_status_1988].
+Päätöksiä, joihin sisältyy
+mahdollinen muutos, ohjaavat odotukset, riskiin suhtautuminen [@kahneman_prospect_1979],
+vastuu teoista vs. tekemättäjättämisistä [@ritov_status-quo_1992], mahdollinen katumus [@ritov_outcome_1995]... Listaa voisi jatkaa pitkään.
+
+Ensimmäisessä tutkimuksessani tarkastelen yksinkertaisen kyselytutkimuksen 
+keinoin resilienssin roolia muutosvastaisuudessa. Huomaan, että resilientit 
+yksilöt vastustavat muutoksia vähemmän. Kuitenkin, verrattaessa
+samankaltaisia persoonallisuuksia, resilinssi on yhteydessä suurempaan muutosten
+vastustamiseen. Tämän selittänevät monet elämäntapahtumat, kuten erilaiset vastoinkäymiset, 
+joiden tiedetään vaikuttavan resilienssin muodostumiseen. Näyttäisi siltä, että
+henkilöt, joiden resilienssi on kehittynyt elämäntapahtumien myötä, ovat kehittäneet
+myös taipumuksen vastustaa muutoksia. Näitä yksilöitä Esa Saarinen ehkä kuvaisi
+sanalla uomakipittäjä.
+
+Seuraavassa tutkimuksessani tutkin kokeellisia menetelmiä käyttäen
+persoonallisuuden vaikutuksia ryhmän päätöksien syntymiseen: siis sitä, kuka
+ryhmässä päättää. Huomaan, että ryhmien ja yksilöiden valinnat eroavat, mutta ero
+selittyy sillä, kuka ryhmässä päättää.
+
+Myöhemmin tutkin missä määrin yksilöillä todettuja muutoksia koskeviin
+päätöksiin liittyviä ns. *käyttäytymisvinoumia* (tai kognitiivisia vinoumia)
+esiintyy ryhmissä. Ovatko esimerkiksi ryhmätkin taipuvaisia pysymään nykytilassa
+muutoksen sijaan?
+
+*Ihan mahdollisten ajatusten* tutkiminen on tuntunut kovin hedelmälliseltä ja 
+antoisalta. Laitahan viestiä, jos ajatukseni herättivät sinussa ajatuksia.
+
+## Lähteet
+
