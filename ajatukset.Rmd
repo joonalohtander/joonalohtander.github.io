@@ -4,7 +4,10 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 author: "Joona Lohtander"
 bibliography: library.bib
 link-citations: true
-output: html
+output: 
+    html_document:
+        includes:
+            before_body: banner.html
 ---
 
 Olin noin viikko sitten Suomen Kulttuurirahaston vuosijuhlassa aivan valloittavassa seurassa. Jälkeenpäin
