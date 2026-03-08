@@ -21,7 +21,7 @@ asian jännittävyys, mutta ei niinkään syy jännittävyydelle. Tässä teksti
 koitan hieman raottaa väitöskirjani jännittävyyttä. Tästä tuli vähän pitkä, ja
 vähän ajatuksenvirtamainen, sori.
 
-## Esa Saarinen ja ihan mahdolliset ajatukset
+### Esa Saarinen ja ihan mahdolliset ajatukset
 
 Olen kuunnellut Esa Saarisen *Filosofia ja Systeemiajattelu* -luentosarjaa 
 silloin tällöin, mutta ajatuksistani ja ajattelustani hän on vallannut pelkkiä luentoja suuremman
@@ -61,7 +61,7 @@ Kuitenkin, ilman *ihan mahdollinen ajatus* -tyyppistä ajattelua, taloustiede ei
 nyt olisi nykyisessä asemassaan. Tunnustaessamme erilaisten ajatusten olemassaolon
 voimme tutkia missä määrin niitä esiintyy ja missä määrin ne näyttäytyvät käyttäytymisessä.
 
-## Käyttäytymis*talous*tiede ja psykologia
+### Käyttäytymis*talous*tiede ja psykologia
 
 Taloustieteen ja käyttäytymisen kytkös ei ehkä ole ilmiselvä taloustieteen ulkopuolelta
 tarkasteltuna. Kuitenkin taloudelliset ilmiöt kumpuavat ihmisten käyttäytymisestä.
@@ -94,7 +94,7 @@ niiden ja perinteisempien, normatiivisten ajattelutapojen välillä. Nykyäänki
 käyttäytymistaloustieteen tutkimuksessa käyttäytymistä peilataan usein erilaisiin
 perinteisempien mallien ennustuksiin.
 
-## Paluu väikkäriini
+### Paluu väikkäriini
 
 Väitöskirjassani tutkin kokeellisen taloustieteen keinoin persoonallisuuden ja
 käyttäytymisvinoumien vaikutuksia ryhmien taloudellisiin päätöksiin. Erityisesti
