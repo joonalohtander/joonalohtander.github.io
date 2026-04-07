@@ -1,15 +1,14 @@
 #! /bin/sh
 
-cd /home/joona/joonalohtander.github.io
+cd /var/www/joonalohtander.github.io
 
 Rscript ternary.R
 
-mv ternary.png ./norssi/
+mv ternary.png ./sttp/
 
 git add .
 
 git commit -m "Autoupdate ternary"
 
 git push
-
 
