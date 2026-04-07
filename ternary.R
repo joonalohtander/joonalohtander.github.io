@@ -1,4 +1,5 @@
-library(tidyverse)
+library(magrittr)
+library(ggplot2)
 library(googlesheets4)
 library(ggtern)
 library(data.table)
