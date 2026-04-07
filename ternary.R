@@ -13,7 +13,7 @@ max_value = 8 # Maximum value in Likert scale
 # sheet_url is the URL for the data from the Google form (Google Sheets link)
 gs4_deauth()
 sheet_url <-
-  "https://docs.google.com/spreadsheets/d/1xCLr3IhDbjMgCBj7Dwijlv28d332-VtGGgG0N0cKPX4/edit?usp=sharing"
+    "https://docs.google.com/spreadsheets/d/1_npp7sVT169SbQQuSoPZN24YoDNCkOycobL0LSwdPmc/edit?usp=sharing"
 data <- read_sheet(sheet_url) %>%
   as.data.table()
 
