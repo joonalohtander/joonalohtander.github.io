@@ -12,41 +12,37 @@ output:
 
 ## Take part in an experiment and earn!
 
-The experiment takes approximately **60 minutes** in total.
+The experiment takes approximately **60 minutes**.
 
-All participants are paid a show up fee of **10 € and a bonus of up to 7.7 €** depending on choices made during
-the experiment.
+All participants are paid a show up fee of **10 € and a bonus of up to 7.7 €**
+depending on choices made during the experiment.
 
 To participate, follow the steps below.
 
 For questions, please don't hesitate to contact me at [joona.lohtander@oulu.fi](mailto:joona.lohtander@oulu.fi).
 
-### 1. Join the UbiComp Sona Systems participant pool (optional)
+### 1. Join the UbiComp Sona Systems participant pool
 
-For a smooth registration, you can join the UbiComp Sona Systems participant pool here: [Sona Systems](https://oulu-ubicomp.sona-systems.com)
+Join the UbiComp Sona Systems participant pool here: [Sona Systems](https://oulu-ubicomp.sona-systems.com)
 
-Just click on 'Request Account' and fill all the info. If you wish to only take part
-in this experiment and do not wish to register to the participant pool, please contact
-me directly.
+Click on 'Request Account' and fill in your information.
 
 ### 2. Find a suitable session time
 
 You can find the session times from Sona Systems after registration and book
-your session time directly from there. Otherwise, you may contact me
-directly.
+your session time directly from there.
 
-All sessions are in the computer room TA102 in Linnanmaa Campus. The preliminary
+All sessions are in computer rooms in the Linnanmaa Campus. The preliminary
 session times are:
 
-**Wednesday 27.5. at 10 and 12**
+**Monday 7.9. at 10, 12, 14, and 16**
 
-**Thursday 28.5. at 12 and 14**
+**Monday 14.9. at 10, 12, 14, and 16**
 
-**Tuesday 2.6. at 12**
+**Tuesday 15.9. at 10, 12, 14, and 16**
 
-**Thursday 4.6. at 10, 12 and 14**
-
-More sessions will be scheduled depending on participation numbers!
+We reserve the right to cancel sessions if an adequate number of participants do
+not show up.
 
 ### 4. Show up
 
