@@ -23,7 +23,7 @@ For questions, please don't hesitate to contact me at [joona.lohtander@oulu.fi](
 
 ### 1. Join the UbiComp Sona Systems participant pool
 
-Join the UbiComp Sona Systems participant pool here: [Sona Systems](https://oulu-ubicomp.sona-systems.com)
+Join the [UbiComp](https://ubicomp.oulu.fi/){target="_blank"} Sona Systems participant pool here: [Sona Systems](https://oulu-ubicomp.sona-systems.com){target="_blank"}
 
 Click on 'Request Account' and fill in your information.
 
