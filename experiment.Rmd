@@ -32,14 +32,8 @@ Click on 'Request Account' and fill in your information.
 You can find the session times from Sona Systems after registration and book
 your session time directly from there.
 
-All sessions are in computer rooms in the Linnanmaa Campus. The preliminary
-session times are:
-
-**Monday 7.9. at 10, 12, 14, and 16**
-
-**Monday 14.9. at 10, 12, 14, and 16**
-
-**Tuesday 15.9. at 10, 12, 14, and 16**
+All sessions are in computer rooms in the Linnanmaa Campus. You can find the available
+session times in Sona Systems. Due to renovations in some computer rooms, the exact times will be updated latest on 7.9.
 
 We reserve the right to cancel sessions if an adequate number of participants do
 not show up.
